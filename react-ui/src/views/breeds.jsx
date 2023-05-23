@@ -9,8 +9,8 @@ const Breeds = () => {
 
   return (
     <>
-    <h1>Breeds</h1>
-    <ul>{breeds}</ul>
+    <h1>Breeds</h1>;
+    <ul>{breeds}</ul>;
 </>
       )
 };
