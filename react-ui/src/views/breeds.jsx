@@ -5,7 +5,7 @@ import { selectBreeds } from '../features/breedsSlice';
 const Breeds = () => {
   const data = useSelector(selectBreeds); // data is our local state memory
   const breeds = data && data.map(breed => {
-    return <li>{breed}</li>; 
+    return <li onClick>{breed}</li>; 
   });
 
   return (
