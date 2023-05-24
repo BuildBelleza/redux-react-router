@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { selectBreeds } from '../features/breedsSlice';
 
 const Breeds = () => {
-  const data = useSelector(selectBreeds);
+  const data = useSelector(selectBreeds); // data is our local state memory
   const breeds = data && data.map(breed => {
     return <li>{breed}</li>; 
   });
