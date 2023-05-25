@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectBreeds } from '../features/breedsSlice';
+import { selectSelectedBreeds } from '../features/selectedBreedsSlice';
 
 const Breeds = () => {
   const [selectedBreeds, setSelectedBreeds] = useState([]);
-
+const dispatch = useDispatch();
   const data = useSelector(selectBreeds); // data is our local state memory
 
   const handleClick = e => {
@@ -20,7 +21,7 @@ const Breeds = () => {
     }
 
   const handleSelectedBreeds = () => {
-      console.log(selectedBreeds)
+    dispatch(selectSelectedBreeds(selectedBreeds));
   };
   
   const breeds = data && data.map(breed => {
@@ -40,7 +41,8 @@ const Breeds = () => {
       <>
         <div className="breeds-subheader">
           <h1>Breeds</h1>
-          {selectedBreeds.length > 0 && (<button onClick={ handleSelectedBreeds }>Add selection to favorites?</button>)}
+          {selectedBreeds.length > 0 && (<button onClick={handleSelectedBreeds}>
+            Add selection to favorites?</button>)}
         </div>
         
         <br></br>
