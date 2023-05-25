@@ -14,3 +14,5 @@ export const selectedBreedsSlice = createSlice({
 export const selectSelectedBreeds = state => state.selectedBreeds;
 
 export default selectedBreedsSlice.reducer;
+
+export const { addSelectBreedsToStore } = selectedBreedsSlice.actions;
