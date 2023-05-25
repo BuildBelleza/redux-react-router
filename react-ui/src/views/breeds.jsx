@@ -7,11 +7,11 @@ const Breeds = () => {
   const data = useSelector(selectBreeds); // data is our local state memory
 
   const handleClick = e => {
-    console.log(e.target.dataset.breed);
+    const value = e.target.dataset.breed;
   }
-  
+
   const breeds = data && data.map(breed => {
-    return <li data-breed={breed}  onClick={handleClick}>{breed}</li>; 
+    return <li data-breed={breed} key={breed} onClick={handleClick}>{breed}</li>; 
   })
 
   return (
