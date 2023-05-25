@@ -53,3 +53,29 @@ a {
 .y-navs a:not(:first-of-type) {
   margin: 0 0 0 16px;
 }
+
+.breeds li.active {
+  background-color: black;
+  border: 2px solid rgb(28, 112, 148);
+  color: rgb(71, 183, 231);
+}
+
+.breeds li {
+  border: 2px solid rgb(28, 112, 148);
+  background-color:  white;
+  cursor: pointer;
+  text-align: center;
+  padding: 20px;
+  width: 160px;
+}
+
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  column-gap: 4px;
+ 
+}
+
