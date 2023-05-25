@@ -1,10 +1,20 @@
-// eslint-disable-next-line no-unused-vars
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
+// const findAllBreeds = data => {
+//   const breeds = Object.keys(data);
+//   for (let i = 0; i < breeds.length; i++) {
+//     if (breeds[i].length > 0) {
+//       subbreeds.push(breeds[i]);
+//     }
+//   }
+//   return [...breeds, ...subbreeds];
+// };
+
 export const fetchBreeds = createAsyncThunk('breeds/all', async () => {
-  // eslint-disable-next-line no-unused-vars
   const response = await fetch('https://dog.ceo/api/breeds/list/all');
   const data = await response.json();
+  // const subbreeds = findAllBreeds(data.message);
+  console.log(data.message);
   const breeds = Object.keys(data.message);
   return breeds;
 });
