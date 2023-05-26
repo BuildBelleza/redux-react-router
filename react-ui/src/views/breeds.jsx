@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectBreeds } from '../features/breedsSlice';
-import { selectSelectedBreeds } from '../features/selectedBreedsSlice';
+import { addSelectSelectedBreeds } from '../features/selectedBreedsSlice';
 
 const Breeds = () => {
   const [selectedBreeds, setSelectedBreeds] = useState([]);
@@ -21,7 +21,7 @@ const dispatch = useDispatch();
     }
 
   const handleSelectedBreeds = () => {
-    dispatch(selectSelectedBreeds(selectedBreeds));
+    dispatch(addSelectSelectedBreeds(selectedBreeds));
   };
   
   const breeds = data && data.map(breed => {
