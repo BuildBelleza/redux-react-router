@@ -22,6 +22,7 @@ const dispatch = useDispatch();
 
   const handleSelectedBreeds = () => {
     dispatch(addSelectBreedsToStore(selectedBreeds));
+    setSelectedBreeds([]);
   };
   
   const breeds = data && data.map(breed => {
