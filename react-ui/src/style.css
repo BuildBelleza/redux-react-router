@@ -77,7 +77,7 @@ ul {
   row-gap: 4px;
   column-gap: 4px;
   margin: 20px 0;
- 
+  justify-content: center;
 }
 
 .breeds-subheader {
@@ -98,3 +98,4 @@ padding-bottom: 25px;
   height: 15px;
   cursor: pointer;
 }
+

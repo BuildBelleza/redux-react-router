@@ -12,13 +12,13 @@ const dispatch = useDispatch();
     const value = e.target.dataset.breed;
     let _selectedBreeds = [];
     if (selectedBreeds.indexOf(value) > -1) {
-      const _selectedBreeds = selectedBreeds.filter(breed => breed !== value);
+      _selectedBreeds = selectedBreeds.filter(breed => breed !== value);
     } else {
       _selectedBreeds = [...selectedBreeds, value];
       setSelectedBreeds(_selectedBreeds);
-    }
+    };
     
-    }
+  };
 
   const handleSelectedBreeds = () => {
     dispatch(addSelectBreedsToStore(selectedBreeds));

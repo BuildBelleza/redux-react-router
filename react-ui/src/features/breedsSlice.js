@@ -31,6 +31,10 @@ export const breedsSlice = createSlice({
 });
 
 // allows us to read from this slice of state - very important to understand that
-export const selectBreeds = state => state.breeds;
+export const selectSelectedBreeds = state => state.breeds;
+
+export const selectBreeds = (state, breed) => {
+  return state.breeds.find(b => b === breed);
+};
 
 export default breedsSlice.reducer;
