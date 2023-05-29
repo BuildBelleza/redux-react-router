@@ -10,6 +10,11 @@ html {
   height: 100%;
 }
 
+@font-face {
+  font-family: 'Royalacid_o';
+  src: url('Royalacid_o.ttf') format('truetype');
+}
+
 .root {
   display: flex;
   flex-direction: column;
@@ -20,11 +25,24 @@ footer {
   background-color: #666;
   color: white;
   padding: 30px 0;
+  border-radius: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(0, 0, 0, 0.50);
+  
 }
 
 header {
-  background-color: #ccc;
+  background-color: #666;
   padding: 20px 0;
+  border-radius: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(0, 0, 0, 0.60);
 }
 
 main {
@@ -35,15 +53,34 @@ main {
 .y-wrap {
   margin: 0 auto;
   width: 90%;
+  font-family: Royalacid_o;
+  font-size: 28px;
+  color: rgb(71, 183, 231);
+  font-weight: bolder;
+  text-shadow: 2px 2px 1px rgb(0, 3, 4);
+  
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 13px;
+    background-color: rgb(0, 0, 0, 0.12);
+    color: rgb(71, 183, 231);
+    font-size: 32px;
+    font-weight: bolder;
+    font-family: Royalacid_o;
+    text-shadow: 2px 2px 1px rgb(0, 3, 4);
+    
 }
 
 .y-navs {
   display: flex;
+  
 }
 
 .y-navs a:first-of-type {

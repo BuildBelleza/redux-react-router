@@ -1,7 +1,8 @@
 import React from "react";
 import { Footer, Header, Main } from './sectioning';
 
-import "./style.css";
+
+import "./css/style.css";
 
 export default function App() {
   return (
