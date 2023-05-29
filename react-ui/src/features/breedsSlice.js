@@ -1,14 +1,19 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import React, { useState } from 'react';
 
-// const findAllBreeds = data => {
-//   const breeds = Object.keys(data);
-//   for (let i = 0; i < breeds.length; i++) {
-//     if (breeds[i].length > 0) {
-//       subbreeds.push(breeds[i]);
-//     }
-//   }
-//   return [...breeds, ...subbreeds];
-// };
+const findAllBreeds = data => {
+  const breeds = Object.keys(data);
+  const subbreeds = [];
+  let currentBreedNameIndex = '';
+  for (let i = 0; i < breeds.length; i++) {
+    if (data[breeds[i]].length > 0) {
+      for (let j = 0; j < data[breeds[i]].length; j++) {
+        subbreeds.push(`${breeds[i]}-${data[breeds[i]][j]}`)
+      }
+    }
+  }
+  return [...breeds, ...subbreeds];
+};
 
 export const fetchBreeds = createAsyncThunk('breeds/all', async () => {
   const response = await fetch('https://dog.ceo/api/breeds/list/all');

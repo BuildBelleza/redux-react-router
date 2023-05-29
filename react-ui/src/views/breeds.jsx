@@ -5,7 +5,7 @@ import { addSelectBreedsToStore } from '../features/selectedBreedsSlice';
 
 const Breeds = () => {
   const [selectedBreeds, setSelectedBreeds] = useState([]);
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const data = useSelector(selectBreeds); // data is our local state memory
 
   const handleClick = e => {
@@ -15,10 +15,11 @@ const dispatch = useDispatch();
       _selectedBreeds = selectedBreeds.filter(breed => breed !== value);
     } else {
       _selectedBreeds = [...selectedBreeds, value];
-      setSelectedBreeds(_selectedBreeds);
-    };
-    
+    }
+    setSelectedBreeds(_selectedBreeds);
   };
+    
+  
 
   const handleSelectedBreeds = () => {
     dispatch(addSelectBreedsToStore(selectedBreeds));
@@ -36,21 +37,22 @@ const dispatch = useDispatch();
         {breed}
       </li>
     );
-});
+  });
 
-    return (
-      <>
-        <div className="breeds-subheader">
-          <h1>Breeds</h1>
-          {selectedBreeds.length > 0 && (<button onClick={handleSelectedBreeds}>
-            Add selection to favorites?</button>)}
-        </div>
+  return (
+    <>
+      <div className="breeds-subheader">
+        <h1>Breeds</h1>
+        {selectedBreeds.length > 0 && (
+          <button onClick={handleSelectedBreeds}>Add selection to favorites?</button>
+        )}
+      </div>
         
-        <br></br>
-        <ul className="breeds">{breeds}</ul>
+      <br></br>
+      <ul className="breeds">{breeds}</ul>
         
-      </>
-    )
-  };
+    </>
+  )
+};
 
   export default Breeds;
