@@ -8,7 +8,7 @@ import selectedBreedsReducer from '../features/selectedBreedsSlice';
 export default configureStore({
   reducer: {
     breeds: breedsReducer,
-    // breedsWithSubbreeds: subbreedsReducer,
+    // breedsWithSubbreeds : subbreedsReducer,
     selectedBreeds: selectedBreedsReducer
   }
 });

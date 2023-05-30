@@ -8,7 +8,7 @@ const Favorites = () => {
   const breeds = data && data.map(breed => {
     return (
       <li
-        className={selectedBreeds.indexOf(breed) > -1 ? 'active' : ''} // if breed is in selectedBreeds, then add active class
+        className={selectedBreeds.indexOf(breed) > 1 ? 'active' : ''} // if breed is in selectedBreeds, then add active class
         data-breed={breed}
         key={breed}
         onClick={handleClick}

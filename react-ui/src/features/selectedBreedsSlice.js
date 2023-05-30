@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'; 
-import React, { useState } from 'react';
+
 
 export const selectedBreedsSlice = createSlice({
   name: 'selectedBreeds',
@@ -16,4 +16,4 @@ export const selectSelectedBreeds = state => state.selectedBreeds;
 
 export default selectedBreedsSlice.reducer;
 
-export const { addSelectBreedsToStore } = selectedBreedsSlice.actions;
+export const { addSelectedBreedsToStore } = selectedBreedsSlice.actions;
