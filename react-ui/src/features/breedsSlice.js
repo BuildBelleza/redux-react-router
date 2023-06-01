@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-
 const findAllBreeds = data => {
   const breeds = Object.keys(data);
   const subbreeds = [];

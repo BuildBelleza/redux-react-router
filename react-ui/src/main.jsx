@@ -13,6 +13,8 @@ const root = createRoot(rootElement);
 
 store.dispatch(fetchBreeds());
 
+
+
 root.render(
   <StrictMode>
     <Provider store={store}>

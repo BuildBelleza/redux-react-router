@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectSelectedBreeds } from '../features/breedsSlice';
 
+
 const Favorites = () => {
   const data = useSelector( selectSelectedBreeds );
   
